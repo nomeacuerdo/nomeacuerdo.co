@@ -3,7 +3,12 @@
     <h1>Find me at:</h1>
     <ul class="links">
       <li v-for="item in links" :key="item.title">
-        <a :href="item.url" :alt="item.title" :style="`--item-color: ${item.color};`" target="_blank" rel="noopener noreferrer">
+        <a
+          :href="item.url"
+          :alt="item.title"
+          :style="`--item-color: ${item.color};`"
+          target="_blank"
+          rel="noopener noreferrer">
           <i :class="item.icon"></i>
         </a>
       </li>
@@ -39,8 +44,8 @@ export default defineComponent({
           title: 'Instagram',
           url: 'https://instagram.com/nomeacuerdo',
           color: '#C13584',
-        }, 
-      ]
+        },
+      ],
     };
   },
 });

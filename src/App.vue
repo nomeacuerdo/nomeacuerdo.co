@@ -29,9 +29,9 @@ export default defineComponent({
 
 <style lang="scss">
 :root {
-  --background: #33322e;
-  --color: #E2E7E9;
-  --link: #E35201;
+  --background: #121212;
+  --color: #f8f9fa;
+  --link: #007bff;
   --vue-green: #3eaf7c;
   --vue-blue: #35495E;
 }
@@ -108,6 +108,7 @@ a {
   .block {
     z-index: 1;
     flex-grow: 1;
+    max-width: 1080px;
   }
 
   .nav,
