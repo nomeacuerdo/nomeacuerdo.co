@@ -5,7 +5,7 @@
       <li v-for="item in techLinks" :key="item.title">
         <a :href="item.url" target="_blank">
           <i :class="item.icon"></i>
-          {{item.title}}
+          <span>{{item.title}}</span>
         </a>
       </li>
     </ul>
@@ -14,7 +14,7 @@
       <li v-for="item in toolsLinks" :key="item.title">
         <a :href="item.url" target="_blank">
           <i :class="item.icon"></i>
-          {{item.title}}
+          <span>{{item.title}}</span>
         </a>
       </li>
     </ul>
@@ -89,10 +89,6 @@ export default defineComponent({
           title: 'AWS',
           icon: 'fab fa-aws',
         }, {
-          url: 'https://docs.docker.com/compose/',
-          title: 'Docker Compose',
-          icon: 'fab fa-docker',
-        }, {
           url: 'https://www.sketch.com/',
           title: 'Sketch',
           icon: 'fab fa-sketch',
@@ -100,6 +96,10 @@ export default defineComponent({
           url: 'https://www.adobe.com/products/photoshop.html',
           title: 'Photoshop',
           icon: 'icon-photoshop',
+        }, {
+          url: 'https://docs.docker.com/compose/',
+          title: 'Docker Compose',
+          icon: 'fab fa-docker',
         },
       ],
     };
@@ -115,7 +115,9 @@ export default defineComponent({
   .links {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding: 0 25px;
+    min-height: 80px;
+    flex-wrap: wrap;
 
     li {
       flex-grow: 1;
@@ -123,23 +125,29 @@ export default defineComponent({
       display: flex;
       align-items: flex-end;
       justify-content: center;
-    }
+      margin: 30px 15px 0;
+      min-width: 75px;
 
-    a {
-      display: block;
-      height: 75px;
-    }
-    i {
-      display: block;
-      font-size: 2em;
-      padding-bottom: 10px;
+      a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      i {
+        flex-grow: 2;
+        font-size: 2em;
+        padding-bottom: 10px;
+      }
+      span {
+        flex-grow: 0;
+      }
     }
   }
 
   .hobbies {
     padding: 50px 0;
     margin: auto;
-    min-width: 450px;
     max-width: 80vw;
   }
 </style>

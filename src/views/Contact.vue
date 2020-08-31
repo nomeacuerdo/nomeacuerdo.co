@@ -54,6 +54,9 @@ export default defineComponent({
 <style scoped lang="scss">
   .contact {
     min-width: 480px;
+    @media screen and (max-width: 640px) {
+      min-width: 95vw;
+    }
   }
   .links {
     display: flex;

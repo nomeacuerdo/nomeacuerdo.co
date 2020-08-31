@@ -26,7 +26,6 @@ export default defineComponent({
 });
 </script>
 
-
 <style lang="scss">
 :root {
   --background: #121212;
@@ -109,6 +108,10 @@ a {
     z-index: 1;
     flex-grow: 1;
     max-width: 1080px;
+
+    @media screen and (max-width: 640px) {
+      max-width: 550px;
+    }
   }
 
   .nav,

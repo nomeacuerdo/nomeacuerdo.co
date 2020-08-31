@@ -28,6 +28,12 @@ export default defineComponent({
 
   h1 {
     font-size: 3em;
+
+    strong {
+      @media screen and (max-width: 640px) {
+        display: block;
+      }
+    }
   }
 
   .home {
