@@ -3,17 +3,21 @@
     <div class="block nav">
       <Navigation />
     </div>
-    <div class="block content">
+    <div class="block content" v-if="cheemz">
       <router-view/>
     </div>
     <div class="block footer">
       <Footer />
     </div>
+    <easteregg @easter="egg" :duration="duration">
+      <img alt="bonk" src="./assets/cheemz.png">
+    </easteregg>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import easteregg from '@/components/easteregg.vue';
 import Navigation from '@/components/Navigation.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -22,7 +26,20 @@ export default defineComponent({
   components: {
     Navigation,
     Footer,
+    easteregg,
   },
+  data() {
+    return {
+      cheemz: true,
+      duration: 500,
+    };
+  },
+  methods: {
+    egg() {
+      this.cheemz = false;
+      setTimeout(() => { this.cheemz = true; }, this.duration);
+    }
+  }
 });
 </script>
 
