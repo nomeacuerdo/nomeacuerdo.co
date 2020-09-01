@@ -38,7 +38,7 @@ export default defineComponent({
           icon: 'fab fa-github',
           title: 'Github',
           url: 'https://github.com/nomeacuerdo',
-          color: '#24292e',
+          color: '#0366d6',
         }, {
           icon: 'fab fa-instagram',
           title: 'Instagram',
