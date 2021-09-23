@@ -1,7 +1,9 @@
 <template>
-  &copy; nomeacuerdo.co {{year}}. Image by <a :href="links.jhonny" target="_blank">Alejandro Henao.</a>
-  <br />
-  Made with <a :href="links.vue" target="_blank" class="vuejs"><i class="fab fa-vuejs"></i></a>
+  <footer>
+    &copy; nomeacuerdo.co {{year}}.
+    <br />
+    Image by <a :href="links.jhonny" target="_blank"><span>Alejandro Henao.</span></a> Made with <a :href="links.vue" target="_blank" class="vuejs"><i class="fab fa-vuejs"></i></a>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -12,7 +14,7 @@ export default defineComponent({
   data() {
     return {
       links: {
-        jhonny: 'http://instagram.com/henaoylopez',
+        jhonny: 'http://instagram.com/colorcontradiction',
         vue: 'https://vuejs.org/',
       }
     };
@@ -26,11 +28,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+  footer {
+    padding-bottom: 25px;
+  }
   .vuejs {
-    color: var(--vue-blue);
+    color: var(--vue-inactive);
+
+    &:after {
+      background-color: transparent;
+    }
     
     &:hover {
-      background-color: transparent;
       color: var(--vue-green);
     }
   }

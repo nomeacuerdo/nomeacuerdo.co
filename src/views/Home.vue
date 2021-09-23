@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="nomeacuerdo" src="../assets/nomeacuerdo.png">
     <span class="hello">Hello there!</span>
-    <h1>I'm <strong>Nicolás Arteaga Nieto</strong></h1>
+    <h1>My name is <strong>Nicolás Arteaga Nieto</strong></h1>
     <h2>I'm a <strong>Frontend Developer</strong> based on <strong>Bogotá, Colombia</strong>.</h2>
     <Curriculum />
   </div>
@@ -40,7 +40,7 @@ export default defineComponent({
     text-align: center;
 
     strong {
-      color: var(--link);
+      color: var(--highlight);
     }
     img {
       max-width: 250px;

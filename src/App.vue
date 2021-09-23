@@ -45,11 +45,12 @@ export default defineComponent({
 
 <style lang="scss">
 :root {
-  --background: #121212;
-  --color: #f8f9fa;
-  --link: #007bff;
+  --background: #003049;
+  --text: #eae2b7;
+  --highlight: #d62828;
+  --link: #f77f00;
   --vue-green: #3eaf7c;
-  --vue-blue: #35495E;
+  --vue-inactive: #fcbf49;
 }
 
 body {
@@ -68,23 +69,47 @@ a {
   color: var(--link);
   font-weight: bold;
   padding: 2px 5px;
+  position: relative;
   text-decoration: none;
   transition: .4s;
+  z-index: 1;
+
+  &:after {
+    background-color: var(--link);
+    mix-blend-mode: overlay;
+    bottom: 0;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: .4s;
+    width: 100%;
+    z-index: 0;
+  }
 
   &:hover {
-    color: var(--background);
-    background-color: var(--link);
+    span {
+      color: var(--background);
+    }
+
+    &:after {
+      height: 30px;
+    }
   }
 
   &.router-link-exact-active {
     text-decoration: underline;
+
+    &:after {
+      background-color: transparent;
+    }
   }
 }
 
 #application {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color);
+  color: var(--text);
   font-family: 'M PLUS Rounded 1c', sans-serif;
   position: relative;
   display: flex;

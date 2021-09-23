@@ -72,8 +72,11 @@ export default defineComponent({
       color: var(--color);
       font-size: 5em;
 
-      &:hover {
+      &:after {
         background-color: transparent;
+      }
+
+      &:hover {
         color: var(--item-color);
       }
     }

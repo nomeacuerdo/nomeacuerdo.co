@@ -20,17 +20,18 @@
     </ul>
 
     <p class="hobbies">
-      On the technical side, I have a Computer Science degree and I've worked for over 10 years
-       in development, 7 of them focused on Frontend development.
+      On the technical side, I have a Computer Science degree and I've worked for over {{total.start}} years
+       in development, the latest {{total.front}} of them focused on Frontend development.
+      <br /><br />
+      <em>I lived through IE6 development. I survived Internet Explorer.</em>
       <br /><br />
       Through this journey
        I've picked skills to work on agile environments, lead technical teams
        and even teach a thing or two. The two principal things that I consider that a project
        must have are clean code and a clean git repository.
       <br /><br />
-      On my spare time I play videogames (currently my heart is with Nintendo Switch), play
-       Magic: the Gathering and binge watch a couple of series at a time. I intend to go as soon
-       as possible on a previously planned (but sadly cancelled) trip to Japan. Also, probably
+      On my spare time I collect vinyls, play videogames (currently my heart is with Nintendo Switch),
+       play Magic: the Gathering and binge watch a couple of series at a time. Also, probably
        polish my cooking skills.
     </p>
   </div>
@@ -104,6 +105,14 @@ export default defineComponent({
       ],
     };
   },
+  computed: {
+    total() {
+      return {
+        start: new Date().getFullYear() - 2007,
+        front: new Date().getFullYear() - 2013
+      };
+    }
+  },
 });
 </script>
 
@@ -149,5 +158,6 @@ export default defineComponent({
     padding: 50px 0;
     margin: auto;
     max-width: 80vw;
+    text-align: left;
   }
 </style>
