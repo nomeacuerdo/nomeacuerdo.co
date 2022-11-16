@@ -40,6 +40,11 @@ export default defineComponent({
           url: 'https://github.com/nomeacuerdo',
           color: '#0366d6',
         }, {
+          icon: 'fab fa-mastodon',
+          title: 'Mastodon',
+          url: 'https://col.social/@nomeacuerdo',
+          color: '#595aff',
+        }, {
           icon: 'fab fa-instagram',
           title: 'Instagram',
           url: 'https://instagram.com/nomeacuerdo',
